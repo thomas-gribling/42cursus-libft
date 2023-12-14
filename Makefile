@@ -23,10 +23,10 @@ BONUS_OBJECTS = $(BONUS_FILES:.c=.o)
 	$(CC) -c $(CFLAGS) $?
 
 $(NAME): $(OBJECTS)
-	ar -rc $@ $?
+	ar -rc $@ $? libft.h
 
 bonus: $(OBJECTS) $(BONUS_OBJECTS)
-	ar -rc $(NAME) $?
+	ar -rc $(NAME) $? libft.h
 
 all: $(NAME)
 
